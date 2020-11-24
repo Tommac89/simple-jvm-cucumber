@@ -10,8 +10,8 @@ public class DriverFactory {
     public static WebDriver getDriver() {
         if (null == driver) {
             driver = new ChromeDriver();
+            driver.manage().window().fullscreen();
         }
-        driver.manage().window().fullscreen();
         return driver;
     }
 }
